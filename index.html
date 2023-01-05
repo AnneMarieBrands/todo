@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project: Todo List</title>
+    <script defer src="script.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>ToDo List</h1>
+      <form name="extraTodoForm" onsubmit="return validateForm()" method="post">
+        <input
+          id="input-description"
+          name="extraTodo"
+          placeholder="type your task here..."
+        />
+        <input type="submit" id="btn-add-task" value="Add Task" />
+      </form>
+      <div>
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
