@@ -25,23 +25,24 @@ fetchTodo();
 
 function validateForm() {
   let x = document.forms["extraTodoForm"]["extraTodo"].value;
+  console.log(extraTodo.value);
   if (x == "") {
     alert("Name must be filled out");
     return false;
   }
 }
 
-const data = { description: "extraTodo", done: false };
+// const data = { description: "extraTodo", done: false };
 
-document.getElementById("btn-add-task").addEventListener("click", update);
+// document.getElementById("btn-add-task").addEventListener("click", update);
 
-function update() {
-  fetch("http://localhost:3000/", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  fetchTodo();
-}
+// function update() {
+//   fetch("http://localhost:3000/", {
+//     method: "POST",
+//     body: JSON.stringify(data),
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   });
+//   fetchTodo();
+// }
