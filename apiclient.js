@@ -1,4 +1,4 @@
-BASEURL = "http://localhost:3000/";
+const BASEURL = "http://localhost:3000/";
 
 //get todolist
 
@@ -11,6 +11,12 @@ async function fetchTodo() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      let tasks = Object.keys(data).map((key) => ({
+        id: key,
+        description: data[key].description,
+        done: data[key].done,
+      }));
+      return tasks;
     })
     .catch((error) => {
       console.log(error);

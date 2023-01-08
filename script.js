@@ -1,6 +1,6 @@
 let li = ``;
 
-data.forEach((task) => {
+tasks.forEach((task) => {
   li += ` <li>${task.description} ${task.done} ${task._id}</li>`;
 });
 
@@ -15,7 +15,7 @@ function validateForm() {
   }
 }
 
-const data = { description: "extraTodo", done: false };
+//const data = { description: "extraTodo", done: false };
 
 document.getElementById("btn-add-task").addEventListener("click", update);
 fetchTodo();
