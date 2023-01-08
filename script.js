@@ -1,8 +1,9 @@
 let li = ``;
 
-tasks.forEach((task) => {
-  li += ` <li>${task.description} ${task.done} ${task._id}</li>`;
-});
+// tasks.forEach((task) => {
+//   li += ` <li>${task.description} ${task.done} ${task._id}</li>`;
+// });
+console.log(tasks);
 
 document.getElementById("todo-list").innerHTML = li;
 

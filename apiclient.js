@@ -11,17 +11,14 @@ async function fetchTodo() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      let tasks = Object.keys(data).map((key) => ({
-        id: key,
-        description: data[key].description,
-        done: data[key].done,
-      }));
-      return tasks;
+      const tasks = data;
+      console.log(tasks);
     })
     .catch((error) => {
       console.log(error);
     });
 }
+
 fetchTodo();
 
 //update todolist with task from form
